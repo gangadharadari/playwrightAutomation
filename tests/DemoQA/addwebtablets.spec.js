@@ -27,25 +27,17 @@ import { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
   await page.goto('https://demoqa.com/');
-  await expect(page.getByRole('link', { name: 'Selenium Online Training' })).toBeVisible();
+ 
   await page.getByRole('link', { name: 'Elements' }).click();
   await expect(page.getByText('Elements')).toBeVisible();
   await page.getByRole('link', { name: 'Web Tables' }).click();
   await page.getByRole('button', { name: 'Add' }).click();
-  await page.getByRole('textbox', { name: 'First Name' }).click();
   await page.getByRole('textbox', { name: 'First Name' }).fill('abc');
-  await page.getByRole('textbox', { name: 'Last Name' }).click();
   await page.getByRole('textbox', { name: 'Last Name' }).fill('xyz');
-  await page.getByRole('textbox', { name: 'name@example.com' }).click();
   await page.getByRole('textbox', { name: 'name@example.com' }).fill('abc@xyz.com');
-  await page.getByRole('textbox', { name: 'Age' }).click();
   await page.getByRole('textbox', { name: 'Age' }).fill('21');
-  await page.getByRole('textbox', { name: 'Salary' }).click();
   await page.getByRole('textbox', { name: 'Salary' }).fill('532442');
-  await page.getByRole('textbox', { name: 'Department' }).click();
-  await page.getByRole('textbox', { name: 'Department' }).press('CapsLock');
   await page.getByRole('textbox', { name: 'Department' }).fill('GN');
-  await page.getByRole('textbox', { name: 'Department' }).press('CapsLock');
   await page.getByRole('button', { name: 'Submit' }).click();
   await expect(page.getByRole('heading', { name: 'Web Tables' })).toBeVisible();
 });

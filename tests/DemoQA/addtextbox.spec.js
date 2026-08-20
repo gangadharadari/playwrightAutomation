@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 import textboxdata from "../../testdata/textbox.json"
 
 import { faker } from '@faker-js/faker';
-
+ 
 
 test('Fill textboxes with static values', async ({ page }) => {
   await page.goto('https://demoqa.com/text-box');
