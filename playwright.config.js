@@ -26,9 +26,9 @@ export default defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 3,
+  retries: process.env.CI ? 1 : 3,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : 3,/* based on the system configuration workers will work. 
+  workers: process.env.CI ? 3 : 1,/* based on the system configuration workers will work. 
   based on config 3,4,5,7 workers will work || we can define also.. */
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',/*html is the build in html reporter.. In playwright multiple reporters are there html, dot, line,blob,json,xml, */
@@ -44,7 +44,7 @@ export default defineConfig({
     screenshot: "only-on-failure",
     video: "retain-on-failure",
     trace: "retain-on-failure",
-    headless: false,
+    headless: true,
     // viewport: {
     //   width: 440 , height: 956,
     // },
