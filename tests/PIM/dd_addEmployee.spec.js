@@ -49,6 +49,8 @@ test(`Verify Add Employee With Basic Details - ${emp}`, async ({ page }) => {
 
   await page.getByRole('textbox', { name: 'Username' }).fill(username);
   await page.getByRole('textbox', { name: 'Password' }).fill(password);
+  // await page.getByRole('textbox', { name: 'Username' }).fill(logindata.username);
+  // await page.getByRole('textbox', { name: 'Password' }).fill(logindata.password);
   await page.getByRole('button', { name: 'Login' }).click();
 
   await expect(page.getByRole('link', { name: 'Dashboard' })).toBeVisible();
