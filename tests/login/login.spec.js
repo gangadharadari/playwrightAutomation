@@ -12,7 +12,7 @@ test('Login with valid Credntials ', async ({ page }) => {
   await page.getByRole('link', { name: 'Dashboard' }).click();
   await expect(page.getByRole('link', { name: 'Dashboard' })).toBeVisible();
   await page.getByText('Time at WorkPunched').click();
-  await page.close();
+  
 });
 
 test('Login with Valid username and Invalid password', async ({ page }) => {
