@@ -91,12 +91,16 @@ test('Select any two products and verify total price', async ({ page }) => {
     const productName1 = 'Brocolli';
     const productName2 = 'Cucumber';
 
+    const product1 = await page.locator(`//h4[contains(.,"${productName1}")]`).textContent()
+    console.log('productname:',product1)
     const price1Text = await page.locator(`//h4[contains(.,"${productName1}")]/../p`).textContent();
     const price1 = Number(price1Text)
     console.log('Price of Brocolli: ' + price1Text);
 
     await page.locator(`//h4[contains(.,"${productName1}")]/following-sibling::div[2]/button`).click();
 
+    const product2 = await page.locator(`//h4[contains(.,"${productName2}")]`).textContent()
+    console.log('productname:',product2)
     const price2Text = await page.locator(`//h4[contains(.,"${productName2}")]/../p`).textContent();
     const price2 = Number(price2Text)
     console.log('Price of Cucumber: ' + price2Text);
