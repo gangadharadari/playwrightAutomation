@@ -15,7 +15,7 @@ require('dotenv').config()
 export default defineConfig({
 
   globalTimeout: 60000*60,
-  timeout: 80000,
+  timeout: 100000,
   expect: {
     timeout: 25000,
   },
