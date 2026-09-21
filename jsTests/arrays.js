@@ -70,3 +70,17 @@ console.log(names1) // Output: ["Gangadhar", "Raju", "Ravi", "Banu", "Swathi"]
 const arr6 = [1, 2, 3, 4, 5]
 arr6.splice(2, 0, 6) // adding an element at index 2
 console.log(arr6) // Output: [1, 2, 6, 3, 4, 5]
+
+const points = new Array(40, 100, 1, 5, 25, 10);
+console.log(points)
+
+const cars = ['BMW', 'Volvo', 'Mini'];
+
+// Iterate over the Array values
+let text = "";
+for (let x of cars) {
+  text += x + ", " ;
+}
+
+console.log("text =" , text )
+
