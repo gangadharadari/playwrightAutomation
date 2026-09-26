@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-import logindata from "../../testdata/login.json"
+import logindata from "../../../testdata/login.json"
 
 // test('Login with valid Credntials ', async ({ page }) => {
 // let username = "Admin"
